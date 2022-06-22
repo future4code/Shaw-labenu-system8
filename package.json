@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev ./src/index.ts",
-    "start": "tsc && node ./build/index.js"
+    "start": "tsc && node ./build/index.js", 
+    "Estudante": "ts-node-dev ./src/classes/Estudante.ts"
   },
   "repository": {
     "type": "git",
