@@ -38,3 +38,7 @@ export class TurmaAtiva extends Turma{
         this.estudantes = novosEstudantes; 
     }
 }
+
+
+//app.post("/turma",registrarTurma)
+//app.put("/turma/:turmaId", mudarTurmaDeModulo)

@@ -1,9 +1,7 @@
 import { Request, Response } from "express";
 import {v4 as uuidv4} from 'uuid'; 
-import app from "../app";
 import { Turma } from "../classes/Turma";
 import { criarTurma } from "../data/criarTurma";
-
 
 
 export let registrarTurma = async (req:Request, res:Response) =>{
@@ -21,7 +19,6 @@ export let registrarTurma = async (req:Request, res:Response) =>{
 
         let novaTurma = new Turma(id,nome,modulo); 
         criarTurma(novaTurma).then( (response) => {
-            console.log("response")
             res.status(201).send({message: "Turma Criada!",
                                   turma: novaTurma })
         }).catch( (error) => {
