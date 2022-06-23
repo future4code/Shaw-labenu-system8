@@ -42,3 +42,6 @@ export class TurmaAtiva extends Turma{
 
 //app.post("/turma",registrarTurma)
 //app.put("/turma/:turmaId", mudarTurmaDeModulo)
+//app.get("/turma", buscarTurmas) devolve todas as turmas
+//app.get("/turma?Active=true") devolve turmas ativas (modulo acima de 0)
+//app.get("turma?Active=false") devolve turmas inativas (modulo igual a zero)
