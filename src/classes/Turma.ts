@@ -33,4 +33,8 @@ export class TurmaAtiva extends Turma{
     getDocentes():number[]{
         return this.docentes; 
     }
+
+    setEstudantes(novosEstudantes:number[]):void{
+        this.estudantes = novosEstudantes; 
+    }
 }
