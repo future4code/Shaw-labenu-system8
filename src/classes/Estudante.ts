@@ -1,3 +1,4 @@
+import Hobby from "./Hobby";
 import Usuario from "./Usuario";
 
 class Estudante extends Usuario {
@@ -8,7 +9,7 @@ class Estudante extends Usuario {
         public email:string, 
         public data_nasc:Date, 
         public turma_id:string,
-        //public hobbies:string[]
+        public hobbies:Hobby[]
         ){
         super(id, nome, email, data_nasc, turma_id);
     }
