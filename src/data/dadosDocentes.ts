@@ -1,3 +1,3 @@
 export * from "./registrarDocente"
-export * from "./buscarDocente"
-export * from "./atualizarTurmaDocente"
+export * from "./pesquisarDocente"
+export * from "./mudarTurmaDocente"
