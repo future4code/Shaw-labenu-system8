@@ -10,4 +10,4 @@ TUDO FEITO MENOS DESAFIOS
 Migration.sql incluido
 
 Collection Postman: 
-[Labenu-System8]([https://link-url-here.org](https://documenter.getpostman.com/view/20352134/UzBsHQFq))
+([Labenu-System8](https://documenter.getpostman.com/view/20352134/UzBsHQFq))
