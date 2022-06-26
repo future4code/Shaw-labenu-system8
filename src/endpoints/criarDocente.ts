@@ -1,14 +1,14 @@
 import { Request, Response } from "express";
 // import * as data from "../data";
 import { v4 as uuidv4 } from 'uuid';
-import Docente from "../classes/Docente";
+import Docente, { Especialidades } from "../classes/Docente";
 import { registrarDocente } from "../data/registrarDocente";
 
 export const criarDocente = async (req: Request, res: Response) => {    
     let errorCode: number = 400;
     try {
         let id = uuidv4();        
-        let {nome, email, data_nasc, turma_id} = req.body;
+        let {nome, email, data_nasc, turma_id,especialidade} = req.body;
         
         if (!id || !nome || !email || !new Date(data_nasc) || !turma_id) {
         errorCode = 422;
@@ -16,13 +16,19 @@ export const criarDocente = async (req: Request, res: Response) => {
         throw new Error ("Por favor, confira o preenchimento dos campos")
         };
         
-        let novoDocente = new Docente (
-            id,
-            nome,
-            email,
-            data_nasc,
-            turma_id
-        );
+      
+        let novoDocente = new Docente(id,nome,email,data_nasc,turma_id,especialidade);
+
+        
+        for (let especialidade of novoDocente.especialidades)
+        {
+            
+            if(!(especialidade.toUpperCase() in Especialidades))
+        {
+            throw new Error("Especialidade invalida, tem que ser: 'JS' | 'CSS' | 'React' | 'Typescript' | 'POO (Programação Orientada a Objetos)' ")
+        }
+        }
+        
     
         // const resposta = await data.criarDocente(novoDocente)
         registrarDocente(novoDocente).then((response)=>{
