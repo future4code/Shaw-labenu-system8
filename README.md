@@ -1,4 +1,4 @@
-### LABENU SYSTEM (COM OOP) 
+### LABENU SYSTEM (COM Programação Orientada a Objetos) 
 
 ## Integrantes 
 - Martin Sejas 
