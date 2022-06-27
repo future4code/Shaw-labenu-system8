@@ -1,6 +1,6 @@
 import { connection } from "../connection";
 export const buscarEstudante = async (nome:string) => {
-    const estudante = await connection("Estudante").where('nome', 'like', `%${nome}%`)
+    const estudante = await connection("Estudante").select('*').where('nome', 'like', `%${nome}%`)
     const hobbies = await connection
         .select('Hobby.id', 'Hobby.nome')
         .from('Estudante_Hobby')

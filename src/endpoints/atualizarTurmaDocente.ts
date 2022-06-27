@@ -13,7 +13,7 @@ export const atualizarTurmaDocente = async (req: Request, res: Response)=>{
         }
 
        const resposta = await mudarTurmaDocente(turma_id, id) 
-       res.status(201).send(resposta)
+       res.status(201).send({message: "Mudança de Turma feita com sucesso!"})
 
     } catch (error:any) {
         if(!error.message){
